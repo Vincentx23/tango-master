@@ -1,0 +1,82 @@
+#logo-cvd
+{
+  width: 84% ;
+  height: 10%;
+}
+
+.contentcenter
+  {
+      position: relative;
+      max-width: 260px;
+      margin: auto;
+      background: white;
+      padding: 61px 0px 6px 86px;
+  }
+  .contentcenter-cvd{
+
+    position: relative;
+      max-width: 325px;
+      margin: auto;
+      background: white;
+  
+
+
+  }
+  .uk-button-primary{
+background-color: #2db8b8;
+border-radius: 12px 12px 12px 12px;
+-moz-border-radius: 12px 12px 12px 12px;
+-webkit-border-radius: 12px 12px 12px 12px;
+border: 0px solid #000000;
+  }
+
+  .uk-button-default{
+      color: white;
+background-color: #318ac5;
+border-radius: 12px 12px 12px 12px;
+-moz-border-radius: 12px 12px 12px 12px;
+-webkit-border-radius: 12px 12px 12px 12px;
+border: 0px solid #000000;
+  }
+
+  .uk-button-default:hover{
+      color: white;
+background-color: #2b4d64;
+border-radius: 12px 12px 12px 12px;
+-moz-border-radius: 12px 12px 12px 12px;
+-webkit-border-radius: 12px 12px 12px 12px;
+border: 0px solid #000000;
+  }
+
+.padre { 
+/* margin: 1rem;
+padding: 1rem;
+ IMPORTANTE */
+text-align: center;
+}
+
+
+
+.uk-input{
+  border-radius: 12px 12px 12px 12px;
+-moz-border-radius: 12px 12px 12px 12px;
+-webkit-border-radius: 12px 12px 12px 12px;
+border: 1px solid #000000;
+
+}
+
+.color-cvd{
+color: #008080;  
+border-radius: 12px 12px 12px 12px;
+-moz-border-radius: 12px 12px 12px 12px;
+-webkit-border-radius: 12px 12px 12px 12px;
+padding-top: 1%;
+padding-bottom: 1%;
+
+}
+
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+
+background: #2db8b8;
+}
