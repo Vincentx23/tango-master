@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title></title>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+<link rel="stylesheet" href="css/uikit-rtl.css">
+<link rel="stylesheet" href="css/uikit.css">
+<link rel="stylesheet" href="css/uikit-rtl.min.css">
+<link rel="stylesheet" href="css/uikit.min.css">
+<link rel="stylesheet" href="css/animate.css">
+<!--===============================================================================================-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css">
+<!--===============================================================================================-->
+
+<!--===============================================================================================-->
+    <!--Icono de la pagina-->
+<link rel="icon" type="image/jpg" href="img/logo1.png" />
+
+<style>
+
+  #logo-cvd
+  {
+    width: 84% ;
+    height: 10%;
+  }
+
+.contentcenter
+    {
+        position: relative;
+        max-width: 260px;
+        margin: auto;
+        background: white;
+        padding: 61px 0px 6px 86px;
+    }
+    .contentcenter-cvd{
+
+      position: relative;
+        max-width: 325px;
+        margin: auto;
+        background: white;
+    
+
+
+    }
+    .uk-button-primary{
+background-color: #2db8b8;
+border-radius: 12px 12px 12px 12px;
+-moz-border-radius: 12px 12px 12px 12px;
+-webkit-border-radius: 12px 12px 12px 12px;
+border: 0px solid #000000;
+    }
+  
+    .uk-button-default{
+        color: white;
+background-color: #318ac5;
+border-radius: 12px 12px 12px 12px;
+-moz-border-radius: 12px 12px 12px 12px;
+-webkit-border-radius: 12px 12px 12px 12px;
+border: 0px solid #000000;
+    }
+
+    .uk-button-default:hover{
+        color: white;
+background-color: #2b4d64;
+border-radius: 12px 12px 12px 12px;
+-moz-border-radius: 12px 12px 12px 12px;
+-webkit-border-radius: 12px 12px 12px 12px;
+border: 0px solid #000000;
+    }
+
+.padre { 
+  /* margin: 1rem;
+  padding: 1rem;
+   IMPORTANTE */
+  text-align: center;
+}
+
+
+
+.uk-input{
+    border-radius: 12px 12px 12px 12px;
+-moz-border-radius: 12px 12px 12px 12px;
+-webkit-border-radius: 12px 12px 12px 12px;
+border: 1px solid #000000;
+
+}
+
+.color-cvd{
+  color: #008080;  
+  border-radius: 12px 12px 12px 12px;
+-moz-border-radius: 12px 12px 12px 12px;
+-webkit-border-radius: 12px 12px 12px 12px;
+padding-top: 1%;
+padding-bottom: 1%;
+
+}
+
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+
+background: #2db8b8;
+}
+</style>
+</head>
+<body>
+<!--Bar nav-->
+    <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-left">        
+           <br>    
+        </div>
+    </nav>
+    <br>   <br>
+        
+            <fieldset class="uk-fieldset">    
+              <div class="padre">                  
+                <div class="contentcenter-cvd">                     
+                  <div class="color-cvd ">
+                    <img src="img/start.png" sizes="" width="70px"  alt="logo" >
+                                 <h2 class=".uk-text-primary"><strong>Tango</strong></h2>         
+               <!-- <span uk-icon="icon:user ; ratio: 3.5"></span>-->    
+               <br>   
+               <div class="uk-card uk-card-default uk-card-small uk-card-body">
+                <h3 class="uk-card-title">Iniciar Sesión</h3>
+                                             
+                  <div class="uk-margin">                          
+                    <div class="uk-width-1-1"> 
+                      <div class="uk-inline">
+                      <a class="uk-form-icon" href="#" uk-icon="icon: mail"></a>
+                       <input class="uk-input " id="email" type="text" name="email"   placeholder="Correo eléctronico..." autofocus required>
+                      </div>
+                      </div> 
+                  </div> 
+                  <div class="uk-margin">                          
+                    <div class="uk-width-1-1"> 
+                      <div class="uk-inline">
+                        <a class="uk-form-icon" href="#" uk-icon="icon: lock"></a>    
+                       <input class="uk-input "  id="Password" type="password" name="pass"   placeholder="Contraseña..." autofocus required>
+                        </div> 
+                      </div> 
+                  </div>
+                      <button  id="btn-login" type="submit" name="action" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom"  value="logc in">
+                          Ingresar
+                      </button>             
+                <br>                     
+                       
+              
+                <button class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom">Registrar</button>  
+             
+                  
+              </div>
+          </div>
+            </div>
+            </fieldset>   
+        
+     
+
+
+                  
+  
+  
+  <!--===============================================================================================-->
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+  <script src="js/ukit/uikit.js"></script>
+  <script src="js/ukit/uikit.min.js"></script>
+  <script src="js/ukit/uikit-icons.js"></script>
+  <script src="js/ukit/uikit-icons.min.js"></script>
+  <!--===============================================================================================-->
+</body>
+</html>
