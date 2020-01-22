@@ -40,37 +40,33 @@
                 <li class="active">
                     <a href="" >
                         <i class="fas fa-home"></i>
-                        Home
+                        Inicio
                     </a>
                 
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fas fa-briefcase"></i>
-                        About
+                        <i class="fas fa-location-arrow"></i>
+                        Rutas
                     </a>
                     <a href="">
-                        <i class="fas fa-copy"></i>
-                        Pages
+                        <i class="fas fa-map"></i>
+                        Mapa de rutas
                     </a>
                  
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fas fa-image"></i>
-                        Portfolio
+                        <i class="fas fa-info"></i>
+                        Información
                     </a>
                 </li>
+               
                 <li>
                     <a href="#">
-                        <i class="fas fa-question"></i>
-                        FAQ
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-paper-plane"></i>
-                        Contact
+                        <i class="fas fa-sign-out-alt"></i>
+                        Cerrar Sesión
+
                     </a>
                 </li>
             </ul>
@@ -84,10 +80,13 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
 
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                 <!--<button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
                         <span>Minimizar barra lateral</span>
-                    </button>
+                    </button>-->
+
+                     <button class="btn btn-primary">Cambiar asignaciones <i class="fas far fa-edit pl-1"></i></button>
+
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button>
@@ -105,48 +104,265 @@
             <ul class="nav nav-tabs nav-justified md-tabs indigo" id="myTabJust" role="tablist">
                 <li class="nav-item">
                   <a class="nav-link active" id="home-tab-just" data-toggle="tab" href="#home-just" role="tab" aria-controls="home-just"
-                    aria-selected="true">Rutas de Hoy</a>
+                    aria-selected="true">Itinerario de Hoy</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" id="profile-tab-just" data-toggle="tab" href="#profile-just" role="tab" aria-controls="profile-just"
-                    aria-selected="false">Rutas Futuras</a>
+                    aria-selected="false">Itinerario Futuro</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" id="contact-tab-just" data-toggle="tab" href="#contact-just" role="tab" aria-controls="contact-just"
-                    aria-selected="false">Rutas pasadas</a>
+                    aria-selected="false">Itinerario pasado</a>
                 </li>
               </ul>
               <div class="tab-content card pt-5" id="myTabContentJust">
-                <div class="tab-pane fade show active" id="home-just" role="tabpanel" aria-labelledby="home-tab-just">
-                  <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro
-                    synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher
-                    retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip
-                    placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-                </div>
-                <div class="tab-pane fade" id="profile-just" role="tabpanel" aria-labelledby="profile-tab-just">
-                  <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1
-                    labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft
-                    beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad
-                    vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
-                    helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes
-                    anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party
-                    scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
-                </div>
-                <div class="tab-pane fade" id="contact-just" role="tabpanel" aria-labelledby="contact-tab-just">
-                  <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro
-                    fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone
-                    skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings
-                    gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork
-                    biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl
-                    craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
-                </div>
-                <button class="btn btn-primary">Cambiar asignaciones <i class="fas far fa-edit pl-1"></i></button>
-              </div>
+                              <div class="tab-pane fade show active" id="home-just" role="tabpanel" aria-labelledby="home-tab-just">
+                    
+<!--Table itinerario de hoy -->
+<table id="tablePreview" class="table">
+    <!--Table head-->
+      <thead>
+        <tr>
+          <th>Tango #</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Asignacion</th>      
+        </tr>
+      </thead>
+      <!--Table head-->
+      <!--Table body-->
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td><button class="btn btn-primary" data-toggle="modal" data-target="#modalCart1">Mapa de ruta</button></td>
 
-            <div class="line"></div>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td><button class="btn btn-primary" data-toggle="modal" data-target="#modalCart1">Mapa de ruta</button></td>
 
-           </div>
+ 
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td> Bird</td>
+          <td><button class="btn btn-primary" data-toggle="modal" data-target="#modalCart1">Mapa de ruta</button></td>
+
+      
+        </tr>
+      </tbody>
+      <!--Table body-->
+</table>
+    <!--Table-->              
+</div>
+<div class="tab-pane fade" id="profile-just" role="tabpanel" aria-labelledby="profile-tab-just">
+<!--Table Itinerario Futuro-->
+<table id="tablePreview" class="table">
+    <!--Table head-->
+      <thead>
+        <tr>
+          <th>Tango #</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+        </tr>
+      </thead>
+      <!--Table head-->
+      <!--Table body-->
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+
+ 
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td> Bird</td>
+
+      
+        </tr>
+      </tbody>
+      <!--Table body-->
+    </table>
+    <!--Table-->     
+</div>
+<div class="tab-pane fade" id="contact-just" role="tabpanel" aria-labelledby="contact-tab-just">
+<!--Table Itinerario paasado-->
+<table id="tablePreview" class="table">
+    <!--Table head-->
+      <thead>
+        <tr>
+          <th>Tango #</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>      
+        </tr>
+      </thead>
+      <!--Table head-->
+      <!--Table body-->
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td><button class="btn btn-primary" data-toggle="modal" data-target="#modalCart">Mapa de ruta</button></td>
+
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td><button class="btn btn-primary" data-toggle="modal" data-target="#modalCart">Mapa de ruta</button></td>
+
+ 
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td> Bird</td>
+          <td><button class="btn btn-primary" data-toggle="modal" data-target="#modalCart">Mapa de ruta</button></td>
+
+      
+        </tr>
+      </tbody>
+      <!--Table body-->
+</table><!--Table-->
+                
+                
+    <div>
+</div>
+
+<div class="line"></div>
+</div>
+</div>
+<!-- Modal: modalCart0 -->
+<div class="modal fade" id="modalCart1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Your cart</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!--Body-->
+      <div class="modal-body">
+
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Vuelo</th>
+              <th>Estado</th>
+              <th>Prioridad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Panamá-Canada</td>              
+              <td><a><i class="fas fa-check"></i></a></td>
+              <td><button class="btn btn-success">No urgente</button></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Panamá-Canada</td>              
+              <td><a><i class="fas fa-times"></i></a></td>
+              <td><button class="btn btn-danger">Urgente</button></td>
+            </tr>
+ 
+          </tbody>
+        </table>
+
+      </div>
+      <!--Footer-->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+      
+      </div>
     </div>
+  </div>
+</div>
+<!-- Modal: modalCart1 -->
+
+<!-- Modal: modalCart1 -->
+<div class="modal fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Your cart</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!--Body-->
+      <div class="modal-body">
+
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Vuelo</th>
+              <th>Estado</th>
+              <th>Condición </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Panamá-Canada</td>              
+              <td><a><i class="fas fa-check"></i></a></td>
+              <td><button class="btn btn-success">Termino</button></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Panamá-Canada</td>              
+              <td><a><i class="fas fa-times"></i></a></td>
+              <td><button class="btn btn-danger">No termino</button></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Panamá-Canada</td>              
+              <td><a><i class="fas fa-check"></i></a></td>
+              <td><button class="btn btn-warning">Casi no termina</button></td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Panamá-Canada</td>              
+              <td><a><i class="fas fa-check"></i>></a></td>
+              <td><button class="btn btn-success">Termino</button></td>
+            </tr>  
+          </tbody>
+        </table>
+
+      </div>
+      <!--Footer-->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+      
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal: modalCart1 -->
+
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -162,16 +378,6 @@
             });
         });
     </script>
-</body>
 
-  <!--===============================================================================================-->
-      <!-- jQuery CDN - Slim version (=without AJAX) -->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <!-- Popper.JS -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-      <!-- Bootstrap JS -->
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-  
-  <!--===============================================================================================-->
 </body>
 </html>
